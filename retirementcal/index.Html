@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+
+  <link href='https://fonts.googleapis.com/css?family=Playball' rel='stylesheet'>
+
+  <link href='https://fonts.googleapis.com/css?family=Petit Formal Script' rel='stylesheet'>
+
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'>
+
+  <link href='https://fonts.googleapis.com/css?family=Oregano' rel='stylesheet'>
+
+  <link href='https://fonts.googleapis.com/css?family=Artifika' rel='stylesheet'>
+
+ <link rel="icon" type="image/x-icon" href="retireicon.png">
+    <title> Retirement APP</title>
+</head>
+<style>
+    table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  width: 55%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+.inputbxs{
+width: 100px;
+height: 30px;
+font-size: 18px;
+border: 1px solid rgb(243, 242, 242);
+background-color: #fafafa;
+color: #707070;
+border-style: inset;
+font-family: Ubuntu, sans-serif;
+border-radius: 5px;
+  
+}
+.leftbxs{
+  width: 70px;
+  height: 30px;
+  font-size: 20px;
+  margin: 5px 0px ;
+ 
+  border: 0px solid rgb(255, 146, 209);
+  font-weight:bold;
+  background-color: #f3f3f3;
+  color: #5f5f5f;
+  text-align: ;
+  border-radius: 3px;
+  
+}
+
+.rtBXS{
+  width: 600px;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid rgb(243, 242, 242);
+  background-color: #f3f3f3;
+  color: #5f5f5f;
+  border: 0px solid rgb(255, 146, 209);
+  border-radius: 3px;
+  
+}
+
+.govinfo{
+  resize: none;
+  width: 683px;
+  height: 100px;
+margin: 5px 0px  ;
+text-align: left; 
+border: 1px solid grey;
+background-color: rgb(250, 250, 250);
+border: 1px solid rgb(243, 242, 242);
+background-color: #f3f3f3;
+  color: #5f5f5f;
+border: 0px solid rgb(255, 146, 209);
+border-radius: 3px;
+}
+#designbg{
+  border: 0px solid rgb(255, 255, 255);
+  background-color:#F8F8F8;
+  width :61%;
+  height : 481px;
+  border-radius: 20px 20px 20px 20px;
+  color: #474747;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+#hdr{
+  color: #4b4949;
+  font-family: 'Artifika';
+  font-size: 15px;
+}
+
+#msg{
+  width :100%;
+  height : 10px;
+  
+  padding-bottom: 30px;
+
+  border: 1px solid #F8F8F8;
+ 
+}
+
+#tellme{
+
+  width :10%;
+  height : 35px;
+  border: 1px solid rgb(243, 242, 242);
+  background-color:#fafafa;
+  color:#474747;
+  border-style: inset;
+  font-size: 14px;
+  font-family: Ubuntu, sans-serif;
+  border-radius: 5px;
+  
+}
+
+#tellme:hover{
+background-color:#f5f5f5;
+
+color :#5c5c5c;
+transition:0.5s;
+-webkit-transition: 0.5s;
+-moz-transition: 0.5s;
+-ms-transition: 0.5s;
+-o-transition: 0.5s;
+border: 1px solid rgb(129, 129, 129);
+
+
+}
+
+
+#brk1{
+  display:none;
+
+}
+
+#seeINTOdf{
+  width :90%;
+  height : 330px;
+
+}
+
+#future{
+  font-size: 70px;
+  font-family: 'Playball';
+  text-shadow: 1px 1px 1px #dfdfdf;
+  font-display: swap;
+  color :#7e7e7e;
+
+}
+
+#future:hover{
+ color:#474747;
+ transition: transform 350ms;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+-ms-transition: 0.2s;
+-o-transition: 0.2s;
+
+}
+
+#years{
+
+  font-family: 'Oregano';font-size: 17px;
+  color :#7e7e7e;
+  
+
+}
+
+#years:hover{
+ color:#474747;
+transition:0.2s;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+-ms-transition: 0.2s;
+-o-transition: 0.2s;
+
+}
+
+
+
+h3{
+  font-family: Ubuntu, sans-serif;
+}
+
+#tip{
+
+font-size: 12px;
+font-family: Ubuntu, sans-serif;
+}
+
+#posBRK{
+  display: none;
+}
+
+#hdrMobile{
+  display: none;
+}
+
+body{
+background: rgb(250, 250, 250);
+
+ 
+ }
+
+ img{
+   
+float: center; 
+width: 100px; 
+height: 76px;
+
+ }
+
+ #brk_tag{
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .inputbxs{
+width: 25%;
+height: 30px;
+font-size: 18px;
+border: 1px solid rgb(243, 242, 242);
+background-color:#f5f5f5;
+  color:#474747;
+  border-style: inset;
+  font-family: Ubuntu, sans-serif;
+
+}
+.leftbxs{
+  width: 15%;
+  height: 30px;
+  font-size: 14px;
+  margin: 5px 0px ;
+  border: 1px solid rgb(243, 242, 242);
+  font-weight:bold;
+  background-color: rgb(250, 250, 250);
+  color: #5a5a5a;
+  border: 0px solid rgb(255, 146, 209);
+  
+}
+
+.rtBXS{
+  width: 70%;
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid rgb(243, 242, 242);
+  background-color: rgb(250, 250, 250);
+  color: #5a5a5a;
+  border: 0px solid rgb(255, 146, 209);
+  
+}
+
+.govinfo{
+  
+  resize: none;
+  width: 92%;
+  height: 170px;
+  margin: 5px 0px  ;
+  text-align: left; 
+  font-size: 14px;
+  border: 1px solid rgb(243, 242, 242);
+  background-color: rgb(250, 250, 250);
+  color: #5a5a5a;
+  border: 0px solid rgb(255, 146, 209);
+  
+}
+#designbg{
+  border: 0px ;
+  width :100%;
+  height : 860px;
+  border-radius: 10px 10px 10px 10px;
+  background-color: #F8F8F8;
+  
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 15px 0 rgba(0, 0, 0, 0.19);
+
+  
+
+}
+
+#msg{
+  width :100%;
+  height : 20px;
+  border: 1px solid #F8F8F8;
+  font-size: 12px;
+}
+
+  
+#tellme{
+
+  width :25%;
+  height : 35px;
+ 
+  border: 1px solid rgb(243, 242, 242);
+  background-color:#f5f5f5;
+  color:#474747;
+  border-style: inset;
+  font-family: Ubuntu, sans-serif;
+  
+}
+
+#tellme:hover{
+background-color:#f5f5f5;
+
+color :#5c5c5c;
+transition:0.2s;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+-ms-transition: 0.2s;
+-o-transition: 0.2s;
+border: 1px solid rgb(129, 129, 129);
+
+
+}
+
+#brk1{
+  display:none;
+
+}
+#brk2{
+  
+  
+
+}
+
+#tip{
+
+  font-size: 13px;
+  font-family: Ubuntu, sans-serif;
+}
+
+#seeINTOdf{
+  width :90%;
+  height : 440px;
+
+}
+
+#hdr{
+  display: none;
+}
+
+body{
+  
+  background-color:#F8F8F8;
+  color:rgb(44, 44, 44);
+ 
+ }
+
+ #future{font-size: 60px;
+  color:#979696;
+  
+}
+
+#future:hover{
+ color:#474747;
+transition:0.2s;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+-ms-transition: 0.2s;
+-o-transition: 0.2s;
+
+}
+
+
+#years{
+
+  font-size: 14px;
+  color:#979696;
+}
+
+#years:hover{
+color:#474747;
+transition:0.2s;
+-webkit-transition: 0.2s;
+-moz-transition: 0.2s;
+-ms-transition: 0.2s;
+-o-transition: 0.2s;
+
+}
+
+#brak{
+display:none;
+}
+
+#u_future{
+
+ 
+}
+#posBRK{
+  display: block;
+}
+#hdrMobile{
+  display: block;
+  font-size: 17px;
+}
+
+#h_D{
+
+  font-family: Verdana, sans-serif;
+
+}
+
+#pipe{
+  display: none;
+}
+
+#brk_tag{
+  display: block;
+}
+}
+</style>
+</head>
+
+
+
+
+
+<body    style="visibility: hidden;" onload="js_Load()">
+
+<center>
+
+<h3 id = "hdr">When will i retire from work?</h3>
+
+
+
+
+<br id = "brk1" >
+<div id = "designbg">
+  <br id = "brk2">
+  <h3 id = "hdrMobile">When will I retire from work?</h3>
+
+  <small id = "tip">Type your birth & current employment year</small>
+
+  
+  <br><br>
+ <input type="Number" class ="inputbxs" id="DofB" placeholder="1995"> 
+
+
+ <input type="Number" class ="inputbxs" id="DofE" placeholder="2015" > 
+ <button id = "tellme"  onclick="calmyretstat()">Tell me...</button>
+
+
+ <div id = "seeINTOdf">
+  <span  id = "brksss">
+  <br><br><br><id = "brak" br>
+</span>
+<span id = "posBRK">
+<br><br>
+</span>
+<span id = "ftru">
+ <div id = "future" onclick="calmyretstat()">See into your <span id = "u_future">future</span> </div>
+ <span  id = "years">Year of retirement <span id = "pipe">|</span> <br  id = "brk_tag"> Years before retirement & more</span>
+ 
+</span>
+
+ <br>
+ <div id = "msg">
+  <p id ="error" style = "color:rgb(245, 31, 31)" ></p>
+<p id ="dRIt" style = "color:rgb(255, 208, 0) ;font-size:20px"></p>
+
+</div>
+<br><br><br><br><br>
+ <img src = "Happy_Retirement.png" alt="retirement_pics"  >
+</div>
+
+ <div  id = "h_D" style = "display:none;">
+  <br>
+<input type="text" placeholder="" class = "leftbxs" id="yrsofworkfig"   readonly="true">   <input type="textbox" placeholder="" class = "rtBXS" id="yrsofworksent" readonly="true">
+ 
+ <br>
+ 
+
+ 
+<input type="text" placeholder="" class = "leftbxs" id="rETyrfig"   readonly="true">  <input type="text" placeholder="" class = "rtBXS" id="rETyr"  readonly="true">
+ 
+ 
+   <br>
+ 
+<input type="text" placeholder="" class = "leftbxs" id="rtAgefig"  readonly="true">  <input type="text" placeholder="" class = "rtBXS" id="rtAge"   readonly="true">
+
+<br>
+
+<input type="text" placeholder="" class = "leftbxs" id="cAgefig"   readonly="true">  <input type="text" placeholder="" class = "rtBXS" id="cAge"   readonly="true">
+
+<br>
+<input type="text" placeholder="" class = "leftbxs" id="wKTYMRfig"   readonly="true">  <input type="text" placeholder="" class = "rtBXS" id="wKTYMR"   readonly="true">
+<br>
+
+
+  <div class = "govinfo"  id="govtF"></div>
+
+
+
+
+
+<div>
+<span id = "posBRK">
+<br><br>
+</span>
+</div>
+
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<span id = "posBRK">
+<br><br><br><br><br>
+</span>
+
+
+
+
+<P >by likeaking company <br><i> reality is a lair</i> </P>
+<br>
+<center/>
+</body>
+<script>
+
+  function show_DIS(){
+    
+
+    document.getElementById("seeINTOdf").style.display = "none";
+    document.getElementById("h_D").style.display = "block";
+
+  }
+function calmyretstat() {
+  
+
+
+  var dOB = document.getElementById("DofB");
+  var dOE = document.getElementById("DofE");
+  var yTR = document.getElementById("yrsofworksent");
+  var yTRFig = document.getElementById("yrsofworkfig");
+ var rTyr = document.getElementById("rETyr");
+ var rTyrF = document.getElementById("rETyrfig");
+ var rtage = document.getElementById("rtAge");
+  var rtageF = document.getElementById("rtAgefig");
+  
+   var cAgeFi = document.getElementById("cAgefig");
+  var cAgest = document.getElementById("cAge");
+  
+   var wKingTymeF = document.getElementById("wKTYMRfig");
+  var wKingTyme = document.getElementById("wKTYMR");
+  
+  
+  var err = document.getElementById("error");
+  
+
+  
+  var dt = new Date();
+  var cYR = dt.getFullYear();
+
+
+// How many years remaining till retirement
+
+// Not find working years
+
+//Find the current age
+let x = cYR - dOB.value ;
+
+// how many working years remaining
+let wkl = 65 - x;
+
+
+//working age limit and reirement year.
+
+let aLW = (dOB.value - 0) + 65;
+
+//Prevent invalid calculation. There must be 18 years gap between DOB & DOE
+
+let prvtinval = dOE.value - dOB.value ;
+
+//Check if someone has reached the retirement age
+
+let agescan = cYR - dOB.value;
+
+
+let age65 = aLW - dOB.value ;
+// ERROR FIELDS
+
+ document.getElementById("dRIt").innerHTML = "" ;
+ 
+ document.getElementById("error").innerHTML = "" ;
+ document.getElementById("govtF").innerHTML = ""; 
+ 
+
+if (dOB.value > 1900 && dOE.value <= cYR && dOB.value !="" && dOE.value !=""  && x >=18 && prvtinval >=18 && agescan <65  ){
+  show_DIS()
+
+ // years of work remianing
+yTRFig.value = wkl - 0; 
+
+yTR.value = "You have" + " " + yTRFig.value + " " + "years to work, before the official retirement age of 65";
+
+// Current age
+cAgeFi.value = x;
+
+cAge.value = "You will be" + " "  + x + " " + "years old this year" + " " + "(" + cYR + ")";
+
+// Official retirement year
+rTyrF.value = aLW;
+
+rTyr.value = "You will be officially retired in the year" + " " + aLW + " " + " at the age of" +" " + age65;
+
+// Retirement Age 65
+rtage.value = " The offical retirement age is 65 years";
+
+rtageF.value = aLW - dOB.value ; 
+
+
+
+//wKingTymeF.value = (dOE.value - dOB.value) - 65;
+
+// Years spent on the current job
+
+wKingTymeF.value = cYR - dOE.value ;
+
+
+
+// Years spent on the current job
+wKingTyme.value = "You have worked for" + " " + wKingTymeF.value + " " + "years since you were employed in" + " " + dOE.value;
+
+}
+
+
+
+
+
+ // For people who got employed in their mids or late
+ 
+ // Govt para and etc
+ let sYr = 35;
+ 
+ let wTYmRemain = sYr - wKingTymeF.value;
+ 
+ // add age plus 35 years to know how many working age remaining and the excess
+ //Trigger
+ let a = sYr + x;
+ 
+ //Calculate actuall working YEARS remaining
+ 
+ let aWR = a - 65;
+ 
+ // Subtract the remainder of aWR from 35 to get the real number of years remaining to work
+ 
+ let rYR = sYr - aWR;
+ 
+ //The year of retirement for someone with less than 35 years to work
+ 
+ let yOR = cYR + rYR ;
+ 
+ //when the current job will end
+ 
+ let cJoben = (sYr + 0)- wKingTymeF.value;
+ 
+ // the year the current job will end
+ 
+ let yCEnd = (cYR + cJoben)- 0;
+ 
+ // Find if the working time remaining will not conflict with the official 65 years retirement
+ 
+ //How many years to work ater the first retirement
+  let hMyrsR = yOR - yCEnd;
+  
+  // For people with less than 35 years to work
+  let less35 = (dOE.value - 0) + 35;
+  // Find how many years have spilled out of the 65 years. If the remaining working years is less
+  let xyz= (less35 + 0 ) - yOR;
+  
+  // Find the less than 35 years remaining
+  
+  let fFind = (35 + 0) - xyz;
+  
+  // if it higer - trap
+  
+  let qxx = (less35 - 0) - dOB.value;
+  
+  //find how old the person will be after completing his first 35 years of service
+  
+  let hWOLDin =  yCEnd -  dOB.value;
+  
+  
+  if ( a > 65 && dOB.value > 1900 && dOE.value <= cYR && dOB.value !="" && dOE.value !=""  && x >=18 && prvtinval >=18 && agescan <65  && qxx >= 65){
+ 
+ 
+ 
+ document.getElementById("govtF").innerHTML  =  "You have worked for" + " " + wKingTymeF.value + " " + "years since you were employed in" + " " + dOE.value +".You will still have" + " " + rYR + " " + "years to work before you reach the official retirement age of 65"+ "," + " in the year" + " " + yOR + "." ;
+}
+ 
+ 
+ 
+ 
+ 
+ if ( a > 65 && dOB.value > 1900 && dOE.value <= cYR && dOB.value !="" && dOE.value !=""  && x >=18 && prvtinval >=18 && agescan <65 && qxx < 65){
+ 
+ 
+ 
+ document.getElementById("govtF").innerHTML = " You have worked for" + " " + wKingTymeF.value + " " + "years since you were employed in" + " " + dOE.value + ".You have"+ " "  + cJoben + " years to work before you complete your 35 years of service in " + yCEnd + " " + ",at age" + " "+ hWOLDin + ".You will still have another" + " " + hMyrsR + " " + "years to work before you reach the official retirement age of 65"+ "," + " in the year" + " " + yOR + ".";
+}
+
+// Calculate for the people who were employed early
+
+//calculate when the 35 years of srvice will end
+
+let wchk = (dOE.value - 0) + sYr;
+
+//How many yeras before the 35 years will be complete
+
+let bcomp = sYr - wKingTymeF.value;
+
+//Find date of first retirement
+
+let dFRet = wchk - dOB.value;
+
+// How many years to reach the offical retirement age of 65.
+
+let b65 = 65- dFRet;
+
+if ( a < 65 && dOB.value > 1900 && dOE.value <= cYR && dOB.value !="" && dOE.value !=""  && x >=18 && prvtinval >=18 && agescan <65){
+document.getElementById("govtF").innerHTML = " You have worked for" + " " + wKingTymeF.value + " " + "years since you were employed in" + " " + dOE.value + ". You have" + " "  + bcomp + " " + "years remaining to work, before the completion of the official 35 years of work/service in" + " " + wchk + ", at age" + " " + dFRet + "." + "You will still have another" + " " + b65 + " " + "years to work before you get to the offical retirement age of 65 in" + " " + rTyrF.value + "." ;
+
+
+}
+
+
+
+if (x < 18){
+
+let find18 =  (dOB.value - 0 )+18;
+
+let info = " Sorry, you are currently not up to 18 years old (The legal working age).You will be 18 in " + find18 + ". Once you are 18 you will be able to calculate your retirement info.";
+
+ document.getElementById("error").innerHTML = info ;
+ document.getElementById("dRIt").innerHTML = "" ;
+ document.getElementById("govtF").innerHTML = info;
+
+}
+
+if (dOB.value =="" && dOE.value ==""){
+
+
+
+let infoin = "Pls type dates in the input fields!"
+
+ document.getElementById("error").innerHTML = infoin  ;
+ document.getElementById("dRIt").innerHTML = "" ;
+
+}
+
+
+if (dOB.value > cYR ){
+
+
+
+let infoIb = "Invalid date of birth!"
+
+ document.getElementById("error").innerHTML = infoIb ;
+ document.getElementById("dRIt").innerHTML = "" ;
+
+}
+
+if (agescan >=65 && dOB.value !="" && dOE.value !=""){
+
+
+
+let retire = "Congrats! You have reached the golden age of retirement."
+
+ document.getElementById("dRIt").innerHTML = retire ;
+ document.getElementById("error").innerHTML = "" ;
+ document.getElementById("govtF").innerHTML =retire;
+
+}
+
+if ( prvtinval <18){
+
+
+
+let infoIb2 = "Invalid date of birth! Check your date of birth and date of employment info. "
+
+ document.getElementById("error").innerHTML = infoIb2 ;
+ document.getElementById("dRIt").innerHTML = "" ;
+
+}
+if (dOE.value > cYR){
+
+
+
+let infoIb3 = "Invalid work date!"
+
+ document.getElementById("error").innerHTML = infoIb3 ;
+ document.getElementById("dRIt").innerHTML = "" ;
+
+}
+if (dOE.value == "" && dOB.value == ""){
+
+
+
+let empfields = "Please add years to the year fields "
+
+ document.getElementById("error").innerHTML = empfields ;
+ document.getElementById("dRIt").innerHTML = "" ;
+
+}
+
+
+}
+
+function js_Load(){
+
+document.body.style.visibility='visible'
+
+}
+
+</script>
+</html>
